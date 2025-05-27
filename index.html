@@ -1,385 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Shenghai Yuan - Homepage</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Shenghai Yuan's homepage" />
-    <style type="text/css">
-      @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
-      html {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        max-width: 100%;
-        height: 100%;
-      }
-      body {
-        padding: 0;
-        margin: 0 auto;
-        max-width: 800px;
-        min-width: 375px;
-      }
-      a {
-        text-decoration: none;
-        color: #1772d0;
-        cursor: pointer;
-      }
-      a:hover {
-        color: #f09228;
-      }
-      strong {
-        font-weight: 400;
-      }
+
+<head>
+  <title>Shenghai Yuan - Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Shenghai Yuan's homepage" />
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
+
+    html {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      max-width: 100%;
+      height: 100%;
+    }
+
+    body {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px;
+      min-width: 375px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #1772d0;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: #f09228;
+    }
+
+    strong {
+      font-weight: 400;
+    }
+
+    header {
+      font-size: 15px;
+      min-height: 273px;
+      padding: 20px;
+      margin: 8px 20px;
+      padding-right: 220px;
+      position: relative;
+    }
+
+    header>picture {
+      position: absolute;
+      width: 200px;
+      height: 273px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    @media (max-width: 540px) {
       header {
-        font-size: 15px;
-        min-height: 273px;
-        padding: 20px;
-        margin: 8px 20px;
-        padding-right: 220px;
-        position: relative;
+        padding-right: 0;
       }
-      header > picture {
-        position: absolute;
-        width: 200px;
-        height: 273px;
-        right: 0;
-        top: 0;
-        bottom: 0;
+
+      header>picture {
+        position: static;
+        display: block;
         margin: auto;
       }
-      @media (max-width: 540px) {
-        header {
-          padding-right: 0;
-        }
-        header > picture {
-          position: static;
-          display: block;
-          margin: auto;
-        }
-      }
-      .self-intro-name {
-        padding: 14px 0;
-        text-align: center;
-        font-weight: 400;
-        font-size: 32px;
-      }
-      .self-intro-links {
-        text-align: center;
-      }
-      h1 {
-        font-size: 24px;
-        padding: 20px;
-        margin: 0;
-        font-weight: 400;
-      }
-      .award-heading {
-          margin-bottom: 10px;
-          padding: 20px;
-          font-weight: 400;
-      }
-      .award ul {
-          margin-top: 0;
-      }
-      .publication {
-        padding: 20px;
-        font-size: 15px;
-      }
-      .publication p {
-        margin: 0;
-      }
-      .publication > picture {
-        float: left;
-        object-fit: contain;
-        margin-right: 20px;
-        overflow: hidden;
-      }
-      .publication > picture > img {
-        transition: transform ease-in-out .3s;
-      }
-      .publication > picture > img:hover {
-        transform: scale(1.1);
-      }
-      .publication .title {
-        font-weight: 500;
-        margin-bottom: 5px;
-      }
-      .publication .authors {
-        margin-bottom: 5px;
-      }
-      .publication .venue {
-        margin-bottom: 5px;
-      }
-      .publication .links {
-        margin-bottom: 5px;
-      }
-      .publication .link::before {
-        content: "[";
-      }
-      .publication .link::after {
-        content: "]";
-      }
-      .publication .link {
-        margin-right: 3px;
-      }
-      .publication .desc {
-        margin-top: 14px;
-        font-size: 14px;
-      }
-      footer {
-        text-align: right;
-        padding: 20px;
-        font-size: 14px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="self-intro-name">Shenghai Yuan (袁盛海)</div>
+    }
+
+    .self-intro-name {
+      padding: 14px 0;
+      text-align: center;
+      font-weight: 400;
+      font-size: 32px;
+    }
+
+    .self-intro-links {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      padding: 20px;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .award-heading {
+      margin-bottom: 10px;
+      padding: 20px;
+      font-weight: 400;
+    }
+
+    .award ul {
+      margin-top: 0;
+    }
+
+    .publication {
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    .publication p {
+      margin: 0;
+    }
+
+    .publication>picture {
+      float: left;
+      object-fit: contain;
+      margin-right: 20px;
+      overflow: hidden;
+    }
+
+    .publication>picture>img {
+      transition: transform ease-in-out .3s;
+    }
+
+    .publication>picture>img:hover {
+      transform: scale(1.1);
+    }
+
+    .publication .title {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .publication .authors {
+      margin-bottom: 5px;
+    }
+
+    .publication .venue {
+      margin-bottom: 5px;
+    }
+
+    .publication .links {
+      margin-bottom: 5px;
+    }
+
+    .publication .link::before {
+      content: "[";
+    }
+
+    .publication .link::after {
+      content: "]";
+    }
+
+    .publication .link {
+      margin-right: 3px;
+    }
+
+    .publication .desc {
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: right;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="self-intro-name">Shenghai Yuan (袁盛海)</div>
+    <picture>
+      <img width="170" height="228"
+        src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/profile/profile.jpg?raw=true" alt="ID Photo" />
+    </picture>
+    <div>
+      <p>
+        I am a master of computer science and technology at
+        <a href="https://www.ece.pku.edu.cn/">School of Electron and Computer Engineering</a>,
+        <a href="https://www.pku.edu.cn/">Peking University</a>, advised by Prof.
+        <a href="https://yuanli2333.github.io/">Li Yuan</a>.
+        I received my B. Eng in
+        <a href="https://cs.gdut.edu.cn/">School of Computer Science and Technology</a>,
+        <a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>.
+      </p>
+      <p>
+        My research interests include but are not limited to <strong>Video Generation</strong> and <strong>Multimodal
+          Large Language Models</strong>.
+      </p>
+      <div class="self-intro-links">
+        <a href="mailto:shyuan-cs@hotmail.com">Email</a>
+        &nbsp;|&nbsp;
+        <a href="https://scholar.google.com/citations?user=kcgdO0sAAAAJ">Google Scholar</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/SHYuanBest">GitHub</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1>Selected Publications</h1>
+
+    <div class="publication">
       <picture>
-        <img width="170" height="228" src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/profile/profile.jpg?raw=true" alt="ID Photo" />
+        <img
+          src="OpenS2V-Nexus_logo.png"
+          width="154" height="153"
+          alt="OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation" />
       </picture>
       <div>
-        <p>
-          I am a master of computer science and technology at 
-          <a href="https://www.ece.pku.edu.cn/">School of Electron and Computer Engineering</a>, 
-          <a href="https://www.pku.edu.cn/">Peking University</a>, advised by Prof. 
-          <a href="https://yuanli2333.github.io/">Li Yuan</a>. 
-          I received my B. Eng in 
-          <a href="https://cs.gdut.edu.cn/">School of Computer Science and Technology</a>, 
-          <a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>.
+        <p class="title">OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation
         </p>
-        <p>
-          My research interests include but are not limited to <strong>Video Generation</strong> and <strong>Multimodal Large Language Models</strong>.
+        <div class="authors">
+          <strong>Shenghai Yuan</strong>,</span>
+          <a href="https://github.com/pkuhxy">Xianyi He</a>,</span>
+          <a href="https://arxiv.org/abs/2503.10391">Yufan Deng</a>,</span>
+          <a href="https://scholar.google.com/citations?user=2Vh4KeAAAAAJ&hl=zh-CN&oi=sra">YangYe</a>,</span>
+          <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&user=GCOVDKoAAAAJ">Bin
+            Lin</a>,</span>
+          <a href="http://chongyangma.com/">Chongyang Ma</a>,</span>
+          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
+          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
+        </div>
+        <p class="venue">Arxiv, 2025</p>
+        <div class="links">
+          <span class="link"><a href="https://arxiv.org/abs/2505.20292">Paper</a></span>
+          <span class="link"><a href="https://github.com/PKU-YuanGroup/OpenS2V-Nexus">Code</a></span>
+          <span class="link"><a href="https://pku-yuangroup.github.io/OpenS2V-Nexus/">Page</a></span>
+          <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M">Dataset</a></span>
+          <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/OpenS2V-Eval">Benchmark</a></span>
+          <span class="link"><a href="https://huggingface.co/spaces/BestWishYsh/OpenS2V-Eval">Leaderboard</a></span>
+        </div>
+        <p class="desc">
+          Introducing OpenS2V-Nexus which consists of: (i) OpenS2V-Eval, a fine-grained benchmark, and (ii) OpenS2V-5M, a million-scale dataset.
         </p>
-        <div class="self-intro-links">
-          <a href="mailto:shyuan-cs@hotmail.com">Email</a>
-          &nbsp;|&nbsp;
-          <a href="https://scholar.google.com/citations?user=kcgdO0sAAAAJ">Google Scholar</a>
-          &nbsp;|&nbsp;
-          <a href="https://github.com/SHYuanBest">GitHub</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <picture>
+        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ConsisID/ConsisID_logo.png?raw=true"
+          width="153" height="151" alt="Identity-Preserving Text-to-Video Generation by Frequency Decomposition" />
+      </picture>
+      <div>
+        <p class="title">Identity-Preserving Text-to-Video Generation by Frequency Decomposition</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong>,</span>
+          <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
+          <a href="https://github.com/pkuhxy">Xianyi He</a>,</span>
+          <a href="https://github.com/yunyangge">Yunyang Ge</a>,</span>
+          <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
+          <a href="https://scholar.google.com/citations?user=eALObLQAAAAJ&hl=zh-CN">Liuhan Chen</a>,</span>
+          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
+          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
+        </div>
+        <p class="venue">IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR Highlight)</strong>,
+          2025</p>
+        <div class="links">
+          <span class="link"><a href="https://arxiv.org/abs/2411.17440">Paper</a></span>
+          <span class="link"><a href="https://github.com/PKU-YuanGroup/ConsisID">Code</a></span>
+          <span class="link"><a href="https://pku-yuangroup.github.io/ConsisID/">Page</a></span>
+          <span class="link"><a
+              href="https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data">Dataset</a></span>
+          <span class="link"><a href="https://www.youtube.com/watch?v=PhlgC-bI5SQ">Video</a></span>
+        </div>
+        <p class="desc">
+          We present ConsisID, an identity-preserving text-to-video generation model, which can keep human-identity
+          consistent in the generated video.
+        </p>
+      </div>
+    </div>
+
+    <div class="publication">
+      <picture>
+        <img
+          src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_logo.png?raw=true"
+          width="150" height="153"
+          alt="ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation" />
+      </picture>
+      <div>
+        <p class="title">ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video
+          Generation</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong>,</span>
+          <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
+          <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
+          <a href="https://shyuanbest.github.io/">YaoYang Liu</a>,</span>
+          <a href="https://sherrylone.github.io/">Shaofeng Zhang</a>,</span>
+          <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
+          <a href="https://ruijie-zhu.github.io/">Ruijie Zhu</a>,</span>
+          <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,</span>
+          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
+          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
+        </div>
+        <p class="venue">Neural Information Processing Systems <strong>(NeurIPS D&B Spotlight)</strong>, 2024</p>
+        <div class="links">
+          <span class="link"><a href="https://arxiv.org/abs/2406.18522">Paper</a></span>
+          <span class="link"><a href="https://github.com/PKU-YuanGroup/ChronoMagic-Bench">Code</a></span>
+          <span class="link"><a href="https://pku-yuangroup.github.io/ChronoMagic-Bench/">Page</a></span>
+          <span class="link"><a
+              href="https://huggingface.co/spaces/BestWishYsh/ChronoMagic-Bench">LeaderBoard</a></span>
+          <span class="link"><a
+              href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic-Pro">Dataset_Pro</a></span>
+          <span class="link"><a
+              href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic-ProH">Dataset_ProH</a></span>
+          <span class="link"><a
+              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_Poster.pdf">Poster</a></span>
+        </div>
+        <p class="desc">
+          We present ChronoMagic-Bench, a benchmark for metamorphic evaluation of text-to-time-lapse video generation,
+          can reflect the physical prior capacity of the T2V model.
+        </p>
+      </div>
+    </div>
+
+    <div class="publication">
+      <picture>
+        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_logo.png?raw=true"
+          width="150" height="155" alt="MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators" />
+      </picture>
+      <div>
+        <p class="title">MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong><sup>*</sup>,</span>
+          <a href="https://infaaa.github.io/">Jinfa Huang</a><sup>*</sup>,</span>
+          <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
+          <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
+          <a href="https://ruijie-zhu.github.io/">Ruijie Zhu</a>,</span>
+          <a href="https://twitter.com/LinBin46984">Bin Lin</a>,</span>
+          <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,</span>
+          <a href="https://yuanli2333.github.io/">Li Yuan</a>,</span>
+          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a></span>
+        </div>
+        <p class="venue">IEEE Transactions on Pattern Analysis and Machine Intelligence <strong>(TPAMI)</strong>, 2025
+        </p>
+        <div class="links">
+          <span class="link"><a href="https://arxiv.org/abs/2404.05014">Paper</a></span>
+          <span class="link"><a href="https://github.com/PKU-YuanGroup/MagicTime">Code</a></span>
+          <span class="link"><a href="https://pku-yuangroup.github.io/MagicTime/">Page</a></span>
+          <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic">Dataset</a></span>
+          <span class="link"><a
+              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_poster.pdf">Poster</a></span>
+        </div>
+        <p class="desc">
+          We are thrilled to present MagicTime, a metamorphic time-lapse video generation model and a new dataset
+          ChronoMagic, support U-Net or DiT-based T2V frameworks.
+        </p>
+      </div>
+    </div>
+
+    <div class="publication">
+      <picture>
+        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNetV2_logo_2.png?raw=true"
+          width="150" height="145 " alt="LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing" />
+      </picture>
+      <div>
+        <p class="title">LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong>,</span>
+          <a href="https://shyuanbest.github.io/">Jijia Chen</a>,</span>
+          <a href="https://cps.gdut.edu.cn/kytd/ryjs.htm">Wenchao Jiang</a>,</span>
+          <a href="https://staff.fnwi.uva.nl/z.zhao/">Zhiming Zhao</a>,</span>
+          <a href="https://hkpeilab.github.io/people/">Song Guo</a></span>
+        </div>
+        <p class="venue">IEEE Transactions on Multimedia <strong>(TMM)</strong>, 2024</p>
+        <div class="links">
+          <span class="link"><a href="https://ieeexplore.ieee.org/document/10472132">Paper</a></span>
+          <span class="link"><a href="https://github.com/SHYuanBest/LHNet">Code</a></span>
+        </div>
+        <p class="desc">
+          We introduce LHNetV2, an advanced version of LHNet that combines various dehazing features more efficiently
+          while enhancing inference speed.
+        </p>
+      </div>
+    </div>
+
+    <div class="publication">
+      <picture>
+        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_logo.png?raw=true" width="150"
+          height="150 " alt="LHNet: A Low-cost Hybrid Network for Single Image Dehazing" />
+      </picture>
+      <div>
+        <p class="title">LHNet: A Low-cost Hybrid Network for Single Image Dehazing</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong>,</span>
+          <a href="https://shyuanbest.github.io/">Jijia Chen</a>,</span>
+          <a href="https://shyuanbest.github.io/">Jiaqi Li</a>,</span>
+          <a href="https://cps.gdut.edu.cn/kytd/ryjs.htm">Wenchao Jiang</a>,</span>
+          <a href="https://hkpeilab.github.io/people/">Song Guo</a></span>
+        </div>
+        <p class="venue">ACM International Conference on Multimedia <strong>(ACM MM)</strong>, 2023</p>
+        <div class="links">
+          <span class="link"><a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612594">Paper</a></span>
+          <span class="link"><a href="https://github.com/SHYuanBest/LHNet">Code</a></span>
+          <span class="link"><a
+              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_poster.pdf">Poster</a></span>
+        </div>
+        <p class="desc">
+          We propose LHNet, a Low-cost Hybrid Network that effectively merges various features for single image
+          dehazing.
+        </p>
+      </div>
+    </div>
+
+    <h1>Selected Projects</h1>
+    <div class="publication">
+      <div>
+        <p class="title">Open-Sora Plan</p>
+        <div class="authors">
+          <strong>PKU-Yuan Lab and Tuzhan AI etc.</strong>,</span>
+        </div>
+        <div class="links">
+          <span class="link"><a href="https://arxiv.org/abs/2412.00131">Report</a></span>
+          <span class="link"><a href="https://github.com/PKU-YuanGroup/Open-Sora-Plan">Code</a></span>
         </div>
       </div>
-    </header>
-    <main>
-      <h1>Selected Publications</h1>
-      
-      <div class="publication">
-        <picture>
-          <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ConsisID/ConsisID_logo.png?raw=true" width="153" height="151" alt="Identity-Preserving Text-to-Video Generation by Frequency Decomposition" />
-        </picture>
-        <div>
-          <p class="title">Identity-Preserving Text-to-Video Generation by Frequency Decomposition</p>
-          <div class="authors">
-            <strong>Shenghai Yuan</strong>,</span>
-            <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
-            <a href="https://github.com/pkuhxy">Xianyi He</a>,</span>
-            <a href="https://github.com/yunyangge">Yunyang Ge</a>,</span>
-            <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
-            <a href="https://scholar.google.com/citations?user=eALObLQAAAAJ&hl=zh-CN">Liuhan Chen</a>,</span>
-            <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
-            <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-          </div>
-          <p class="venue">IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR Highlight)</strong>, 2025</p>
-          <div class="links">
-            <span class="link"><a href="https://arxiv.org/abs/2411.17440">Paper</a></span>
-            <span class="link"><a href="https://github.com/PKU-YuanGroup/ConsisID">Code</a></span>
-            <span class="link"><a href="https://pku-yuangroup.github.io/ConsisID/">Page</a></span>
-            <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data">Dataset</a></span>
-            <span class="link"><a href="https://www.youtube.com/watch?v=PhlgC-bI5SQ">Video</a></span>
-          </div>
-          <p class="desc">
-            We present ConsisID, an identity-preserving text-to-video generation model, which can keep human-identity consistent in the generated video.
-          </p>
+    </div>
+
+    <h1>Patents</h1>
+    <div class="publication">
+      <div>
+        <p class="title">An acceleration system and method for deconvolution calculation in neural networks</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong>,</span>
+          <a href="https://hpcds.gdut.edu.cn/info/1015/1792.htm">Bosheng Liu</a>,</span>
+          <a href="https://shyuanbest.github.io/">Xiaoming Lie</a>,</span>
+          <a href="https://shyuanbest.github.io/">Guanfu Cai</a></span>
         </div>
+        <p class="venue">CN202210582998.5 / CN114821262A</p>
       </div>
+    </div>
 
-      <div class="publication">
-        <picture>
-          <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_logo.png?raw=true" width="150" height="153" alt="ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation" />
-        </picture>
-        <div>
-          <p class="title">ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation</p>
-          <div class="authors">
-            <strong>Shenghai Yuan</strong>,</span>
-            <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
-            <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
-            <a href="https://shyuanbest.github.io/">YaoYang Liu</a>,</span>
-            <a href="https://sherrylone.github.io/">Shaofeng Zhang</a>,</span>
-            <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
-            <a href="https://ruijie-zhu.github.io/">Ruijie Zhu</a>,</span>
-            <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,</span>
-            <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
-            <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-          </div>
-          <p class="venue">Neural Information Processing Systems <strong>(NeurIPS D&B Spotlight)</strong>, 2024</p>
-          <div class="links">
-            <span class="link"><a href="https://arxiv.org/abs/2406.18522">Paper</a></span>
-            <span class="link"><a href="https://github.com/PKU-YuanGroup/ChronoMagic-Bench">Code</a></span>
-            <span class="link"><a href="https://pku-yuangroup.github.io/ChronoMagic-Bench/">Page</a></span>
-            <span class="link"><a href="https://huggingface.co/spaces/BestWishYsh/ChronoMagic-Bench">LeaderBoard</a></span>
-            <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic-Pro">Dataset_Pro</a></span>
-            <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic-ProH">Dataset_ProH</a></span>
-            <span class="link"><a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_Poster.pdf">Poster</a></span>
-          </div>
-          <p class="desc">
-            We present ChronoMagic-Bench, a benchmark for metamorphic evaluation of text-to-time-lapse video generation, can reflect the physical prior capacity of the T2V model.
-          </p>
+    <div class="publication">
+      <div>
+        <p class="title">A cleaning device for exterior windows of high-rise buildings</p>
+        <div class="authors">
+          <strong>Shenghai Yuan</strong></span>
         </div>
+        <p class="venue">CN201821848303.9 / CN209678371U</p>
       </div>
+    </div>
 
-      <div class="publication">
-        <picture>
-          <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_logo.png?raw=true" width="150" height="155" alt="MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators" />
-        </picture>
-        <div>
-          <p class="title">MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators</p>
-          <div class="authors">
-            <strong>Shenghai Yuan</strong><sup>*</sup>,</span>
-            <a href="https://infaaa.github.io/">Jinfa Huang</a><sup>*</sup>,</span>
-            <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
-            <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
-            <a href="https://ruijie-zhu.github.io/">Ruijie Zhu</a>,</span>
-            <a href="https://twitter.com/LinBin46984">Bin Lin</a>,</span>
-            <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,</span>
-            <a href="https://yuanli2333.github.io/">Li Yuan</a>,</span>
-            <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a></span>
-          </div>
-          <p class="venue">IEEE Transactions on Pattern Analysis and Machine Intelligence <strong>(TPAMI)</strong>, 2025</p>
-          <div class="links">
-            <span class="link"><a href="https://arxiv.org/abs/2404.05014">Paper</a></span>
-            <span class="link"><a href="https://github.com/PKU-YuanGroup/MagicTime">Code</a></span>
-            <span class="link"><a href="https://pku-yuangroup.github.io/MagicTime/">Page</a></span>
-            <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic">Dataset</a></span>
-            <span class="link"><a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_poster.pdf">Poster</a></span>
-          </div>
-          <p class="desc">
-            We are thrilled to present MagicTime, a metamorphic time-lapse video generation model and a new dataset ChronoMagic, support U-Net or DiT-based T2V frameworks.
-          </p>
+    <div class="publication">
+      <div>
+        <p class="title">FPGA-based mixed-precision data frequency domain convolution acceleration method and system</p>
+        <div class="authors">
+          <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
+          <a href="https://hpcds.gdut.edu.cn/info/1015/1792.htm">Bosheng Liu</a>,</span>
+          <a href="https://hpcds.gdut.edu.cn/info/1233/2082.htm">Yi Chen</a>,</span>
+          <strong>Shenghai Yuan</strong></span>
         </div>
+        <p class="venue">CN201821848303.9 / CN209678371U</p>
       </div>
-      
-      <div class="publication">
-        <picture>
-          <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNetV2_logo_2.png?raw=true" width="150" height="145 " alt="LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing" />
-        </picture>
-        <div>
-          <p class="title">LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing</p>
-          <div class="authors">
-            <strong>Shenghai Yuan</strong>,</span>
-            <a href="https://shyuanbest.github.io/">Jijia Chen</a>,</span>
-            <a href="https://cps.gdut.edu.cn/kytd/ryjs.htm">Wenchao Jiang</a>,</span>
-            <a href="https://staff.fnwi.uva.nl/z.zhao/">Zhiming Zhao</a>,</span>
-            <a href="https://hkpeilab.github.io/people/">Song Guo</a></span>
-          </div>
-          <p class="venue">IEEE Transactions on Multimedia <strong>(TMM)</strong>, 2024</p>
-          <div class="links">
-            <span class="link"><a href="https://ieeexplore.ieee.org/document/10472132">Paper</a></span>
-            <span class="link"><a href="https://github.com/SHYuanBest/LHNet">Code</a></span>
-          </div>
-          <p class="desc">
-            We introduce LHNetV2, an advanced version of LHNet that combines various dehazing features more efficiently while enhancing inference speed.
-          </p>
-        </div>
-      </div>
+    </div>
 
-      <div class="publication">
-        <picture>
-          <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_logo.png?raw=true" width="150" height="150 " alt="LHNet: A Low-cost Hybrid Network for Single Image Dehazing" />
-        </picture>
-        <div>
-          <p class="title">LHNet: A Low-cost Hybrid Network for Single Image Dehazing</p>
-          <div class="authors">
-            <strong>Shenghai Yuan</strong>,</span>
-            <a href="https://shyuanbest.github.io/">Jijia Chen</a>,</span>
-            <a href="https://shyuanbest.github.io/">Jiaqi Li</a>,</span>
-            <a href="https://cps.gdut.edu.cn/kytd/ryjs.htm">Wenchao Jiang</a>,</span>
-            <a href="https://hkpeilab.github.io/people/">Song Guo</a></span>
-          </div>
-          <p class="venue">ACM International Conference on Multimedia <strong>(ACM MM)</strong>, 2023</p>
-          <div class="links">
-            <span class="link"><a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612594">Paper</a></span>
-            <span class="link"><a href="https://github.com/SHYuanBest/LHNet">Code</a></span>
-            <span class="link"><a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_poster.pdf">Poster</a></span>
-          </div>
-          <p class="desc">
-            We propose LHNet, a Low-cost Hybrid Network that effectively merges various features for single image dehazing.
-          </p>
-        </div>
-      </div>
-    
-      <h1>Selected Projects</h1>
-      <div class="publication">
-        <div>
-          <p class="title">Open-Sora Plan</p>
-          <div class="authors">
-            <strong>PKU-Yuan Lab and Tuzhan AI etc.</strong>,</span>
-          </div>
-          <div class="links">
-            <span class="link"><a href="https://arxiv.org/abs/2412.00131">Report</a></span>
-            <span class="link"><a href="https://github.com/PKU-YuanGroup/Open-Sora-Plan">Code</a></span>
-          </div>
-        </div>
-      </div>
-    
-      <h1>Patents</h1>
-        <div class="publication">
-          <div>
-            <p class="title">An acceleration system and method for deconvolution calculation in neural networks</p>
-            <div class="authors">
-              <strong>Shenghai Yuan</strong>,</span>
-              <a href="https://hpcds.gdut.edu.cn/info/1015/1792.htm">Bosheng Liu</a>,</span>
-              <a href="https://shyuanbest.github.io/">Xiaoming Lie</a>,</span>
-              <a href="https://shyuanbest.github.io/">Guanfu Cai</a></span>
-            </div>
-            <p class="venue">CN202210582998.5 / CN114821262A</p>
-          </div>
-        </div>
+    <h1 id="award-heading">Awards</h1>
+    <div class="award">
+      <ul>
+        <li><em>National Scholarship Award, PRC (2021)</em></li>
+        <li><em>National Scholarship Award, PRC (2022)</em></li>
+        <li><em>National Scholarship Award, PRC (2023)</em></li>
+      </ul>
+    </div>
 
-        <div class="publication">
-          <div>
-            <p class="title">A cleaning device for exterior windows of high-rise buildings</p>
-            <div class="authors">
-              <strong>Shenghai Yuan</strong></span>
-            </div>
-            <p class="venue">CN201821848303.9 / CN209678371U</p>
-          </div>
-        </div>
+    <h1 id="award-heading">Academic Service</h1>
+    <div class="academic_service">
+      <ul>
+        <li><em>CVPR 2025, SIGGRAPH 2025, ACM MM 2024, ACM MM 2023</em></li>
+      </ul>
+    </div>
 
-        <div class="publication">
-          <div>
-            <p class="title">FPGA-based mixed-precision data frequency domain convolution acceleration method and system</p>
-            <div class="authors">
-              <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
-              <a href="https://hpcds.gdut.edu.cn/info/1015/1792.htm">Bosheng Liu</a>,</span>
-              <a href="https://hpcds.gdut.edu.cn/info/1233/2082.htm">Yi Chen</a>,</span>
-              <strong>Shenghai Yuan</strong></span>
-            </div>
-            <p class="venue">CN201821848303.9 / CN209678371U</p>
-          </div>
-        </div>
+  </main>
 
-        <h1 id="award-heading">Awards</h1>
-        <div class="award">
-            <ul>
-                <li><em>National Scholarship Award, PRC (2021)</em></li>
-                <li><em>National Scholarship Award, PRC (2022)</em></li>
-                <li><em>National Scholarship Award, PRC (2023)</em></li>
-            </ul>
-        </div>
+  <footer>
+    Last updated: May 2025<br>
+    Template from
+    <a href="https://github.com/SHYuanBest/shyuanbest.github.io">here</a><br />
+  </footer>
+</body>
 
-        <h1 id="award-heading">Academic Service</h1>
-        <div class="academic_service">
-            <ul>
-                <li><em>CVPR 2025, SIGGRAPH 2025, ACM MM 2024, ACM MM 2023</em></li>
-            </ul>
-        </div>
-
-    </main>
-
-    <footer>
-      Last updated: Apr 2025<br>
-      Template from
-      <a href="https://github.com/SHYuanBest/shyuanbest.github.io">here</a><br/>
-    </footer>
-  </body>
 </html>
