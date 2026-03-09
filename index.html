@@ -1,525 +1,630 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-  <title>Shenghai Yuan - Homepage</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Shenghai Yuan's homepage" />
-  <style type="text/css">
-    @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Shenghai Yuan</title>
 
-    html {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      max-width: 100%;
-      height: 100%;
-    }
+  <meta name="author" content="Shenghai Yuan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="The academic portfolio and personal homepage of Shenghai Yuan, Master's student at Peking University.">
+  <meta name="keywords"
+    content="Shenghai Yuan, Yuan Shenghai, Peking University, PKU Master, NVIDIA Research Scientist, Academic Portfolio, Personal Homepage">
 
-    body {
-      padding: 0;
-      margin: 0 auto;
-      max-width: 800px;
-      min-width: 375px;
-    }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shenghai Yuan | Academic Portfolio">
+  <meta property="og:description"
+    content="The academic portfolio and personal homepage of Shenghai Yuan, Master's student at Peking University.">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/profile2.jpg">
+  <meta property="og:url" content="https://shyuanbest.github.io/">
 
-    a {
-      text-decoration: none;
-      color: #1772d0;
-      cursor: pointer;
-    }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shenghai Yuan | Academic Portfolio">
+  <meta name="twitter:description"
+    content="Explore the research and academic portfolio of Shenghai Yuan, Master's student at Peking University.">
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/profile2.jpg">
 
-    a:hover {
-      color: #f09228;
-    }
+  <link rel="canonical" href="https://shyuanbest.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/pku_logo.png">
+</head>
 
-    strong {
-      font-weight: 400;
-    }
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shenghai Yuan",
+    "alternateName": "袁盛海",
+    "url": "https://shyuanbest.github.io",
+    "jobTitle": "Master's student at Peking University",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Peking University"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Peking University"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=kcgdO0sAAAAJ",
+      "https://github.com/SHYuanBest",
+      "https://www.linkedin.com/in/shenghai-yuan-012348346"
+    ],
+    "image": "https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/profile2.jpg",
+    "knowsAbout": ["Peking University", "Generative Models", "Computer Vision", "Video Generation", "Multimodal AI", "Efficient AI", "Diffusion Model", "Deep Learning"]
+  }
+  </script>
 
-    header {
-      font-size: 15px;
-      min-height: 273px;
-      padding: 20px;
-      margin: 8px 20px;
-      padding-right: 220px;
-      position: relative;
-    }
-
-    header>picture {
-      position: absolute;
-      width: 200px;
-      height: 273px;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-    }
-
-    @media (max-width: 540px) {
-      header {
-        padding-right: 0;
-      }
-
-      header>picture {
-        position: static;
-        display: block;
-        margin: auto;
-      }
-    }
-
-    .self-intro-name {
-      padding: 14px 0;
-      text-align: center;
-      font-weight: 400;
-      font-size: 32px;
-    }
-
-    .self-intro-links {
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 24px;
-      padding: 20px;
-      margin: 0;
-      font-weight: 400;
-    }
-
-    .award-heading {
-      margin-bottom: 10px;
-      padding: 20px;
-      font-weight: 400;
-    }
-
-    .award ul {
-      margin-top: 0;
-    }
-
-    .publication {
-      padding: 20px;
-      font-size: 15px;
-    }
-
-    .publication p {
-      margin: 0;
-    }
-
-    .publication>picture {
-      float: left;
-      object-fit: contain;
-      margin-right: 20px;
-      overflow: hidden;
-    }
-
-    .publication>picture>img {
-      transition: transform ease-in-out .3s;
-    }
-
-    .publication>picture>img:hover {
-      transform: scale(1.1);
-    }
-
-    .publication .title {
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
-
-    .publication .authors {
-      margin-bottom: 5px;
-    }
-
-    .publication .venue {
-      margin-bottom: 5px;
-    }
-
-    .publication .links {
-      margin-bottom: 5px;
-    }
-
-    .publication .link::before {
-      content: "[";
-    }
-
-    .publication .link::after {
-      content: "]";
-    }
-
-    .publication .link {
-      margin-right: 3px;
-    }
-
-    .publication .desc {
-      margin-top: 14px;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: right;
-      padding: 20px;
-      font-size: 14px;
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <div class="self-intro-name">Shenghai Yuan (袁盛海)</div>
-    <picture>
-      <img width="170" height="228"
-        src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/profile/profile.jpg?raw=true" alt="ID Photo" />
-    </picture>
-    <div>
-      <p>
-        I am currently a second-year master of computer science and technology at
-        <a href="https://www.ece.pku.edu.cn/">School of Electron and Computer Engineering</a>,
-        <a href="https://www.pku.edu.cn/">Peking University</a>, advised by Prof.
-        <a href="https://yuanli2333.github.io/">Li Yuan</a>.
-        I received my B. Eng in
-        <a href="https://cs.gdut.edu.cn/">School of Computer Science and Technology</a>,
-        <a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>.
+  <!-- Floating Header -->
+  <nav class="floating-header">
+    <div class="header-content">
+      <h1 class="name">Shenghai Yuan (袁盛海)</h1>
+      <div class="header-icons">
+        <a href="mailto:shyuan-cs@hotmail.com" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=kcgdO0sAAAAJ" title="Google Scholar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+          </svg>
+        </a>
+        <a href="https://github.com/SHYuanBest" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shenghai-yuan-012348346" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#works">Works</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <span class="icon-sun">☀️</span>
+    <span class="icon-moon">🌙</span>
+  </button>
+
+  <canvas id="particles-bg" role="presentation" aria-hidden="true"></canvas>
+  <div class="container">
+    <header class="profile-section">
+      <p class="role-highlight">
+        Second Year Master @Peking University
       </p>
+    </header>
+
+    <section id="about" class="section-container about-section">
+      <h2>👋 About Me</h2>
+      <div class="about-wrapper">
+        <div class="vision-block">
+          <p>
+            Greetings!
+          </p>
+
+          <p>
+            I am currently a second-year master of computer science and technology at
+            <a href="https://www.ece.pku.edu.cn/">School of Electron and Computer Engineering</a>,
+            <a href="https://www.pku.edu.cn/">Peking University</a>, advised by Prof.
+            <a href="https://yuanli2333.github.io/">Li Yuan</a>.
+            I received my B. Eng in
+            <a href="https://cs.gdut.edu.cn/">School of Computer Science and Technology</a>,
+            <a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>.
+            My research interests include but are not limited to <strong>Video Generation</strong>,
+            <strong>Generative AI</strong>, and <strong>Efficient AI</strong>.
+          </p>
+        </div>
+        <div class="profile-photo">
+          <img alt="profile photo"
+            src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/profile2.jpg">
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section-container news-section">
+      <h2>🔥 News</h2>
+      <ul class="news-list">
+        <li><span class="news-date">Jul 2025</span> 🎉 Joined ByteDance as a Research Intern.</li>
+        <li><span class="news-date">Dec 2024</span> 🎉 I received my B.E. degree from <a href="https://cs.gdut.edu.cn/"
+            target="_blank" rel="noopener noreferrer">Guangdong University of Technology (GDUT)</a>, awarded the
+          Outstanding Graduate, ranking <strong>1<sup>st</sup></strong>/815 in overall scores for four years
+          (2020-2024)!</li>
+      </ul>
+    </section>
+
+    <section id="works" class="section-container">
+      <h2>🎨 Selected Works</h2>
+
+      <div class="project-entry featured-entry">
+        <div class="project-content">
+          <div class="title-group">
+            <h3>🌟 Helios: Real Real-Time Long Video Generation Model</h3>
+          </div>
+          <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>2025</u>)</p>
+          <p class="abstract-featured">
+            The first 14B video generation model that achieves minute-scale, high-quality video synthesis at 19.5 FPS
+            on a single H100 GPU (about 10 FPS on a single Ascend NPU) — without relying on conventional long video
+            anti-drifting strategies or standard video acceleration techniques.
+          </p>
+          <p class="links">
+            [<a href="https://arxiv.org/abs/2603.04379">Paper</a>]
+            [<a href="https://github.com/PKU-YuanGroup/Helios">Code</a>]
+            [<a href="https://pku-yuangroup.github.io/Helios-Page">Page</a>]
+            [<a href="https://huggingface.co/collections/BestWishYsh/helios">HuggingFace</a>]
+          </p>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/Helios/helios_features.mp4"
+              type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="project-entry featured-entry">
+        <div class="project-content">
+          <div class="title-group">
+            <h3>🌟 Identity-Preserving Text-to-Video Generation by Frequency Decomposition</h3>
+          </div>
+          <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>CVPR 2025 Highlight🌟</u>)</p>
+          <p class="abstract-featured">
+            A tuning-free DiT-based controllable IPT2V model to keep human-identity consistent in the generated video.
+            The approach draws inspiration from previous studies on frequency analysis.
+          </p>
+          <p class="links">
+            [<a href="https://arxiv.org/abs/2411.17440">Paper</a>]
+            [<a href="https://github.com/PKU-YuanGroup/ConsisID">Code</a>]
+            [<a href="https://pku-yuangroup.github.io/ConsisID/">Page</a>]
+            [<a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ConsisID/ConsisID_poster.pdf">Poster</a>]
+            [<a href="https://huggingface.co/collections/BestWishYsh/consisid">HuggingFace</a>]
+          </p>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source
+              src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/ConsisID/showcase_videos.mp4"
+              type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="project-entry featured-entry">
+        <div class="project-content">
+          <div class="title-group">
+            <h3>🌟 Open-Sora-Plan</h3>
+          </div>
+          <p class="authors">Open-Sora-Plan Team, <strong>Shenghai Yuan</strong> (2024)</p>
+          <p class="abstract-featured">
+            Pioneering open-source effort to reproduce Sora. Responsible for the high-resolution, long-duration video
+            generation architecture and curating open-source high-quality video datasets.
+          </p>
+          <p class="links">
+            [<a href="https://arxiv.org/abs/2412.00131">Paper</a>]
+            [<a href="https://github.com/PKU-YuanGroup/Open-Sora-Plan">Code</a>]
+            [<a href="https://huggingface.co/collections/LanguageBind/open-sora-plan-model">HuggingFace</a>]
+          </p>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source
+              src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/OpenSoraPlan/showcase_videos.mp4"
+              type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="project-entry featured-entry">
+        <div class="project-content">
+          <div class="title-group">
+            <h3>🌟 MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators</h3>
+          </div>
+          <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>TPAMI 2025</u>)</p>
+          <p class="abstract-featured">
+            A metamorphic video generation model based on the given prompts. The main idea is to enhance the capacity
+            of generation models to accurately depict the real world through our proposed methods.
+          </p>
+          <p class="links">
+            [<a href="https://arxiv.org/abs/2404.05014">Paper</a>]
+            [<a href="https://github.com/PKU-YuanGroup/MagicTime">Code</a>]
+            [<a href="https://pku-yuangroup.github.io/MagicTime">Page</a>]
+            [<a
+              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_poster.pdf">Poster</a>]
+            [<a href="https://huggingface.co/collections/BestWishYsh/magictime">HuggingFace</a>]
+          </p>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source
+              src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/MagicTime/showcase_videos.mp4"
+              type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+
+      <div class="publication-list">
+
+        <div class="project-entry">
+          <img
+            src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/OpenS2V-Nexus/OpenS2V-Nexus_logo.png"
+            class="pku-logo" alt="OpenS2V-Nexus Logo">
+          <div class="project-content">
+            <div class="title-group">
+              <h3>OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation</h3>
+            </div>
+            <div class="authors-links-row">
+              <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>NeurIPS 2025 Spotlight🌟</u>)</p>
+              <p class="links">
+                [<a href="https://arxiv.org/abs/2505.20292">Paper</a>]
+                [<a href="https://github.com/PKU-YuanGroup/OpenS2V-Nexus">Code</a>]
+                [<a href="https://pku-yuangroup.github.io/OpenS2V-Nexus/">Page</a>]
+                [<a
+                  href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/OpenS2V-Nexus/OpenS2V_poster.pdf">Poster</a>]
+                [<a href="https://huggingface.co/collections/BestWishYsh/opens2v-nexus">HuggingFace</a>]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <img
+            src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/ChronoMagic-Bench/ChronoMagic-Bench_logo.png"
+            class="pku-logo" alt="ChronoMagic-Bench Logo">
+          <div class="project-content">
+            <div class="title-group">
+              <h3>ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation</h3>
+            </div>
+            <div class="authors-links-row">
+              <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>NeurIPS 2024 Spotlight🌟</u>)</p>
+              <p class="links">
+                [<a href="https://arxiv.org/abs/2406.18522">Paper</a>]
+                [<a href="https://github.com/PKU-YuanGroup/ChronoMagic-Bench">Code</a>]
+                [<a href="https://pku-yuangroup.github.io/ChronoMagic-Bench/">Page</a>]
+                [<a
+                  href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_Poster.pdf">Poster</a>]
+                [<a href="https://huggingface.co/collections/BestWishYsh/chronomagic-bench">HuggingFace</a>]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <img src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/LHNet/LHNetV2_logo_2.png"
+            class="pku-logo" alt="LHNetV2 Logo">
+          <div class="project-content">
+            <div class="title-group">
+              <h3>LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing</h3>
+            </div>
+            <div class="authors-links-row">
+              <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>TMM 2024</u>)</p>
+              <p class="links">
+                [<a href="https://ieeexplore.ieee.org/document/10472132">Paper</a>]
+                [<a href="https://github.com/SHYuanBest/LHNet">Code</a>]
+                [<a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_poster.pdf">Poster</a>]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <img src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/LHNet/LHNet_logo.png"
+            class="pku-logo" alt="LHNet Logo">
+          <div class="project-content">
+            <div class="title-group">
+              <h3>LHNet: A Low-cost Hybrid Network for Single Image Dehazing</h3>
+            </div>
+            <div class="authors-links-row">
+              <p class="authors"><strong>Shenghai Yuan</strong>, et al. (<u>ACM MM 2023</u>)</p>
+              <p class="links">
+                [<a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612594">Paper</a>]
+                [<a href="https://github.com/SHYuanBest/LHNet">Code</a>]
+                [<a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_poster.pdf">Poster</a>]
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="experience" class="section-container">
+      <h2>💻 Work Experience</h2>
+
+      <div class="education-entry">
+        <img src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/bytedance_logo.png"
+          class="pku-logo" alt="ByteDance Logo">
+        <div class="details">
+          <h3>ByteDance & Tiktok, China</h3>
+          <p>Jul. 2025 - Feb. 2026, Research Intern. Mentor:
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=_MAKSLkAAAAJ">Xiao Yang</a>
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="education" class="section-container">
+      <h2>🎓 Education</h2>
+
+      <div class="education-entry">
+        <img src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/pku_logo.png"
+          class="pku-logo" alt="Peking University Logo">
+        <div class="details">
+          <h3>Peking University, China</h3>
+          <p>Dec. 2024 - Present, Master's Candidate</p>
+        </div>
+      </div>
+      <div class="education-entry">
+        <img src="https://raw.githubusercontent.com/SHYuanBest/shyuanbest_media/main/profile/gdut_logo.png"
+          class="pku-logo" alt="Guangdong University of Technology Logo">
+        <div class="details">
+          <h3>Guangdong University of Technology, China</h3>
+          <p>Dec. 2020 - Jul. 2024, Bachelor of Engineering</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="awards" class="section-container">
+      <h2>🏆 Awards</h2>
+      <div class="details">
+        <ul>
+          <li><strong>National Scholarship</strong>, Ministry of Education, China, 2025</li>
+          <li><strong>National Scholarship</strong>, Ministry of Education, China, 2023</li>
+          <li><strong>National Scholarship</strong>, Ministry of Education, China, 2022</li>
+          <li><strong>National Scholarship</strong>, Ministry of Education, China, 2021</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="academic-service" class="section-container">
+      <h2>🤝 Academic Service</h2>
+      <div class="details">
+        <ul>
+          <li><strong>Reviewer:</strong> ICCV 2025, NeurIPS 2025, CVPR 2025, SIGGRAPH 2025, ACM MM 2024, ACM MM 2023
+          </li>
+          <li><strong>Talk:</strong>
+              <a href="https://www.bilibili.com/video/BV1W2KuzeEEi/?spm_id_from=333.1387.search.video_card.click&vd_source=b216c9abd8f748cfe173becfd80bccd6"> AITIME-ConsisID</a>,
+              <a href="https://techbeat.net/talk-info?id=983"> TechBeat-ConsisID</a>,
+              <a href="https://www.bilibili.com/video/BV12AbQzVE9v/?spm_id_from=333.1387.search.video_card.click"> CV3D-OpenS2V</a>,
+              <a href="https://www.bilibili.com/video/BV19hUUYdE2k/?share_source=copy_web&vd_source=46fea0c86812502b4bd703eca52de309&t=2622&sessionid="> AITIME-ChronoMagic</a>,
+              <a href="https://valser.org/article-901-1.html"> VALSE-ChronoMagic</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-divider"></div>
       <p>
-        My research interests include but are not limited to <strong>Video Generation</strong> and <strong>Multimodal
-          Large Language Models</strong>.
+        <small> © <span id="year"></span> Shenghai Yuan.</small>
       </p>
-      <div class="self-intro-links">
-        <a href="mailto:shyuan-cs@hotmail.com">Email</a>
-        &nbsp;|&nbsp;
-        <a href="https://scholar.google.com/citations?user=kcgdO0sAAAAJ">Google Scholar</a>
-        &nbsp;|&nbsp;
-        <a href="https://github.com/SHYuanBest">GitHub</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <h1>Selected Publications</h1>
+    </footer>
 
-    <div class="publication">
-      <picture>
-        <img
-          src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/Helios/logo_white.png?raw=true"
-          width="154" height="119"
-          alt="Helios: Real Real-Time Long Video Generation Model" />
-      </picture>
-      <div>
-        <p class="title">Helios: Real Real-Time Long Video Generation Model
-        </p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong>,</span>
-          <a href="https://github.com/SII-YuanyangYin">Yuanyang Yin</a>,</span>
-          <a href="https://github.com/qqingzheng">Zongjian Li</a>,</span>
-          <a href="">Xinwei Huang</a>,</span>
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=_MAKSLkAAAAJ">Xiao Yang</a>,</span>
-          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-        </div>
-        <p class="venue">Arxiv, 2026</p>
-        <div class="links">
-          <span class="link"><a href="https://arxiv.org/abs/2603.04379">Paper</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup/Helios">Code</a></span>
-          <span class="link"><a href="https://pku-yuangroup.github.io/Helios-Page">Page</a></span>
-        </div>
-        <p class="desc">
-          Introducing Helios, a breakthrough video generation model that achieves minute-scale, high-quality video synthesis at 19.5 FPS on a single H100 GPU.
-        </p>
-      </div>
-    </div>
+  </div><!-- /.container -->
 
-    <div class="publication">
-      <picture>
-        <img
-          src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/OpenS2V-Nexus/OpenS2V-Nexus_logo.png?raw=true"
-          width="154" height="153"
-          alt="OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation" />
-      </picture>
-      <div>
-        <p class="title">OpenS2V-Nexus: A Detailed Benchmark and Million-Scale Dataset for Subject-to-Video Generation
-        </p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong><sup>*</sup>,</span>
-          <a href="https://github.com/pkuhxy">Xianyi He</a><sup>*</sup>,</span>
-          <a href="https://arxiv.org/abs/2503.10391">Yufan Deng</a>,</span>
-          <a href="https://scholar.google.com/citations?user=2Vh4KeAAAAAJ&hl=zh-CN&oi=sra">YangYe</a>,</span>
-          <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=GCOVDKoAAAAJ">Bin
-            Lin</a>,</span>
-          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
-          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-        </div>
-        <p class="venue">Neural Information Processing Systems <strong>(NeurIPS D&B)</strong>, 2025</p>
-        <div class="links">
-          <span class="link"><a href="https://arxiv.org/abs/2505.20292">Paper</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup/OpenS2V-Nexus">Code</a></span>
-          <span class="link"><a href="https://pku-yuangroup.github.io/OpenS2V-Nexus/">Page</a></span>
-          <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/OpenS2V-5M">Dataset</a></span>
-          <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/OpenS2V-Eval">Benchmark</a></span>
-          <span class="link"><a href="https://huggingface.co/spaces/BestWishYsh/OpenS2V-Eval">Leaderboard</a></span>
-          <span class="link"><a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/OpenS2V-Nexus/OpenS2V_poster.pdf">Poster</a></span>
-        </div>
-        <p class="desc">
-          Introducing OpenS2V-Nexus which consists of: (i) OpenS2V-Eval, a fine-grained benchmark, and (ii) OpenS2V-5M, a million-scale dataset.
-        </p>
-      </div>
-    </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    <div class="publication">
-      <picture>
-        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ConsisID/ConsisID_logo.png?raw=true"
-          width="153" height="151" alt="Identity-Preserving Text-to-Video Generation by Frequency Decomposition" />
-      </picture>
-      <div>
-        <p class="title">Identity-Preserving Text-to-Video Generation by Frequency Decomposition</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong>,</span>
-          <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
-          <a href="https://github.com/pkuhxy">Xianyi He</a>,</span>
-          <a href="https://github.com/yunyangge">Yunyang Ge</a>,</span>
-          <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
-          <a href="https://scholar.google.com/citations?user=eALObLQAAAAJ&hl=zh-CN">Liuhan Chen</a>,</span>
-          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
-          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-        </div>
-        <p class="venue">IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR Highlight)</strong>,
-          2025</p>
-        <div class="links">
-          <span class="link"><a href="https://arxiv.org/abs/2411.17440">Paper</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup/ConsisID">Code</a></span>
-          <span class="link"><a href="https://pku-yuangroup.github.io/ConsisID/">Page</a></span>
-          <span class="link"><a
-              href="https://huggingface.co/datasets/BestWishYsh/ConsisID-preview-Data">Dataset</a></span>
-          <span class="link"><a href="https://www.youtube.com/watch?v=PhlgC-bI5SQ">Video</a></span>
-          <span class="link"><a href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ConsisID/ConsisID_poster.pdf">Poster</a></span>
-        </div>
-        <p class="desc">
-          We present ConsisID, an identity-preserving text-to-video generation model, which can keep human-identity
-          consistent in the generated video.
-        </p>
-      </div>
-    </div>
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
 
-    <div class="publication">
-      <picture>
-        <img
-          src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_logo.png?raw=true"
-          width="150" height="153"
-          alt="ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation" />
-      </picture>
-      <div>
-        <p class="title">ChronoMagic-Bench : A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video
-          Generation</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong>,</span>
-          <a href="https://infaaa.github.io/">Jinfa Huang</a>,</span>
-          <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
-          <a href="https://shyuanbest.github.io/">YaoYang Liu</a>,</span>
-          <a href="https://sherrylone.github.io/">Shaofeng Zhang</a>,</span>
-          <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
-          <a href="https://ruijie-zhu.github.io/">Ruijie Zhu</a>,</span>
-          <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,</span>
-          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>,</span>
-          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-        </div>
-        <p class="venue">Neural Information Processing Systems <strong>(NeurIPS D&B Spotlight)</strong>, 2024</p>
-        <div class="links">
-          <span class="link"><a href="https://arxiv.org/abs/2406.18522">Paper</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup/ChronoMagic-Bench">Code</a></span>
-          <span class="link"><a href="https://pku-yuangroup.github.io/ChronoMagic-Bench/">Page</a></span>
-          <span class="link"><a
-              href="https://huggingface.co/spaces/BestWishYsh/ChronoMagic-Bench">LeaderBoard</a></span>
-          <span class="link"><a
-              href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic-Pro">Dataset_Pro</a></span>
-          <span class="link"><a
-              href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic-ProH">Dataset_ProH</a></span>
-          <span class="link"><a
-              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/ChronoMagic-Bench/ChronoMagic-Bench_Poster.pdf">Poster</a></span>
-        </div>
-        <p class="desc">
-          We present ChronoMagic-Bench, a benchmark for metamorphic evaluation of text-to-time-lapse video generation,
-          can reflect the physical prior capacity of the T2V model.
-        </p>
-      </div>
-    </div>
+    // Check for saved theme preference, default to dark
+    function getPreferredTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+      // Default to dark mode
+      return 'dark';
+    }
 
-    <div class="publication">
-      <picture>
-        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_logo.png?raw=true"
-          width="150" height="155" alt="MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators" />
-      </picture>
-      <div>
-        <p class="title">MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong><sup>*</sup>,</span>
-          <a href="https://infaaa.github.io/">Jinfa Huang</a><sup>*</sup>,</span>
-          <a href="https://yujun-shi.github.io/">Yujun Shi</a>,</span>
-          <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
-          <a href="https://ruijie-zhu.github.io/">Ruijie Zhu</a>,</span>
-          <a href="https://twitter.com/LinBin46984">Bin Lin</a>,</span>
-          <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,</span>
-          <a href="https://yuanli2333.github.io/">Li Yuan</a>,</span>
-          <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a></span>
-        </div>
-        <p class="venue">IEEE Transactions on Pattern Analysis and Machine Intelligence <strong>(TPAMI)</strong>, 2025
-        </p>
-        <div class="links">
-          <span class="link"><a href="https://arxiv.org/abs/2404.05014">Paper</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup/MagicTime">Code</a></span>
-          <span class="link"><a href="https://pku-yuangroup.github.io/MagicTime/">Page</a></span>
-          <span class="link"><a href="https://huggingface.co/datasets/BestWishYsh/ChronoMagic">Dataset</a></span>
-          <span class="link"><a
-              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/MagicTime/MagicTime_poster.pdf">Poster</a></span>
-        </div>
-        <p class="desc">
-          We are thrilled to present MagicTime, a metamorphic time-lapse video generation model and a new dataset
-          ChronoMagic, support U-Net or DiT-based T2V frameworks.
-        </p>
-      </div>
-    </div>
+    // Apply theme
+    function applyTheme(theme) {
+      if (theme === 'system') {
+        html.removeAttribute('data-theme');
+      } else {
+        html.setAttribute('data-theme', theme);
+      }
+    }
 
-    <div class="publication">
-      <picture>
-        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNetV2_logo_2.png?raw=true"
-          width="150" height="145 " alt="LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing" />
-      </picture>
-      <div>
-        <p class="title">LHNetV2: A Balanced Low-cost Hybrid Network for Single Image Dehazing</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong>,</span>
-          <a href="https://shyuanbest.github.io/">Jijia Chen</a>,</span>
-          <a href="https://cps.gdut.edu.cn/kytd/ryjs.htm">Wenchao Jiang</a>,</span>
-          <a href="https://staff.fnwi.uva.nl/z.zhao/">Zhiming Zhao</a>,</span>
-          <a href="https://hkpeilab.github.io/people/">Song Guo</a></span>
-        </div>
-        <p class="venue">IEEE Transactions on Multimedia <strong>(TMM)</strong>, 2024</p>
-        <div class="links">
-          <span class="link"><a href="https://ieeexplore.ieee.org/document/10472132">Paper</a></span>
-          <span class="link"><a href="https://github.com/SHYuanBest/LHNet">Code</a></span>
-        </div>
-        <p class="desc">
-          We introduce LHNetV2, an advanced version of LHNet that combines various dehazing features more efficiently
-          while enhancing inference speed.
-        </p>
-      </div>
-    </div>
+    // Toggle theme
+    function toggleTheme() {
+      const currentTheme = html.getAttribute('data-theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    <div class="publication">
-      <picture>
-        <img src="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_logo.png?raw=true" width="150"
-          height="150 " alt="LHNet: A Low-cost Hybrid Network for Single Image Dehazing" />
-      </picture>
-      <div>
-        <p class="title">LHNet: A Low-cost Hybrid Network for Single Image Dehazing</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong>,</span>
-          <a href="https://shyuanbest.github.io/">Jijia Chen</a>,</span>
-          <a href="https://shyuanbest.github.io/">Jiaqi Li</a>,</span>
-          <a href="https://cps.gdut.edu.cn/kytd/ryjs.htm">Wenchao Jiang</a>,</span>
-          <a href="https://hkpeilab.github.io/people/">Song Guo</a></span>
-        </div>
-        <p class="venue">ACM International Conference on Multimedia <strong>(ACM MM)</strong>, 2023</p>
-        <div class="links">
-          <span class="link"><a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612594">Paper</a></span>
-          <span class="link"><a href="https://github.com/SHYuanBest/LHNet">Code</a></span>
-          <span class="link"><a
-              href="https://github.com/SHYuanBest/shyuanbest_media/blob/main/LHNet/LHNet_poster.pdf">Poster</a></span>
-        </div>
-        <p class="desc">
-          We propose LHNet, a Low-cost Hybrid Network that effectively merges various features for single image
-          dehazing.
-        </p>
-      </div>
-    </div>
+      let newTheme;
+      if (currentTheme === 'dark') {
+        newTheme = 'light';
+      } else if (currentTheme === 'light') {
+        newTheme = 'dark';
+      } else {
+        // Currently using system preference
+        newTheme = systemDark ? 'light' : 'dark';
+      }
 
-    <h1>Selected Projects</h1>
-    <div class="publication">
-      <div>
-        <p class="title">Open-Sora Plan: Open-source large video generation model</p>
-        <div class="authors">
-          <strong>PKU-Yuan Lab and Tuzhan AI etc.</strong>,</span>
-        </div>
-        <div class="links">
-          <span class="link"><a href="https://arxiv.org/abs/2412.00131">Report</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup/Open-Sora-Plan">Code</a></span>
-        </div>
-      </div>
-    </div>
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
 
-    <div class="publication">
-      <div>
-        <p class="title">SparkWan: Few-Step Video Diffusion Transformer via Hybrid Adversarial Post-Training</p>
-        <div class="authors">
-          <a href="https://scholar.google.com/citations?user=_TT3r1cAAAAJ&hl=zh-CN&oi=sra">Zongjian Li*</a>,</span>
-          <strong>Shenghai Yuan*</strong>,</span>
-          <a href="https://yuanli2333.github.io/">Li Yuan</a></span>
-        </div>
-        <div class="links">
-          <span class="link"><a href="https://github.com/PKU-YuanGroup">Report</a></span>
-          <span class="link"><a href="https://github.com/PKU-YuanGroup">Code</a></span>
-        </div>
-      </div>
-    </div>
+    // Initialize theme
+    const initialTheme = getPreferredTheme();
+    applyTheme(initialTheme);
 
-    <h1>Patents</h1>
-    <div class="publication">
-      <div>
-        <p class="title">An acceleration system and method for deconvolution calculation in neural networks</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong>,</span>
-          <a href="https://hpcds.gdut.edu.cn/info/1015/1792.htm">Bosheng Liu</a>,</span>
-          <a href="https://shyuanbest.github.io/">Xiaoming Lie</a>,</span>
-          <a href="https://shyuanbest.github.io/">Guanfu Cai</a></span>
-        </div>
-        <p class="venue">CN202210582998.5 / CN114821262A</p>
-      </div>
-    </div>
+    // Listen for toggle click
+    themeToggle.addEventListener('click', toggleTheme);
 
-    <div class="publication">
-      <div>
-        <p class="title">A cleaning device for exterior windows of high-rise buildings</p>
-        <div class="authors">
-          <strong>Shenghai Yuan</strong></span>
-        </div>
-        <p class="venue">CN201821848303.9 / CN209678371U</p>
-      </div>
-    </div>
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme('system');
+      }
+    });
 
-    <div class="publication">
-      <div>
-        <p class="title">FPGA-based mixed-precision data frequency domain convolution acceleration method and system</p>
-        <div class="authors">
-          <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a>,</span>
-          <a href="https://hpcds.gdut.edu.cn/info/1015/1792.htm">Bosheng Liu</a>,</span>
-          <a href="https://hpcds.gdut.edu.cn/info/1233/2082.htm">Yi Chen</a>,</span>
-          <strong>Shenghai Yuan</strong></span>
-        </div>
-        <p class="venue">CN201821848303.9 / CN209678371U</p>
-      </div>
-    </div>
+    // Animated Stars Background
+    const canvas = document.getElementById('particles-bg');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    const numStars = 80;
 
-    <h1 id="award-heading">Awards</h1>
-    <div class="award">
-      <ul>
-        <li><em>National Scholarship Award, PRC (2025)</em></li>
-        <li><em>Pacemaker to Merit Student, Peking University (2025)</em></li>
-        <li><em>National Scholarship Award, PRC (2023)</em></li>
-        <li><em>National Scholarship Award, PRC (2022)</em></li>
-        <li><em>National Scholarship Award, PRC (2021)</em></li>
-      </ul>
-    </div>
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
 
-    <h1 id="award-heading">Academic Service</h1>
-    <div class="academic_service">
-      <ul>
-        <li><em>ICCV 2025, NeurIPS 2025, CVPR 2025, SIGGRAPH 2025, ACM MM 2024, ACM MM 2023</em></li>
-      </ul>
-    </div>
+    function createStars() {
+      stars = [];
+      // Reduce stars on mobile for performance
+      const isMobile = window.innerWidth <= 600;
+      const actualStars = isMobile ? Math.floor(numStars * 0.5) : numStars;
 
-  </main>
+      // Grid-based distribution for even spread
+      const cols = isMobile ? 8 : 10;
+      const rows = isMobile ? 5 : 8;
+      const cellWidth = canvas.width / cols;
+      const cellHeight = canvas.height / rows;
 
-  <footer>
-    Last updated: Mar. 2026<br>
-    Template from
-    <a href="https://github.com/SHYuanBest/shyuanbest.github.io">here</a><br />
-  </footer>
+      for (let i = 0; i < actualStars; i++) {
+        const col = i % cols;
+        const row = Math.floor(i / cols);
+        stars.push({
+          x: col * cellWidth + Math.random() * cellWidth,
+          y: row * cellHeight + Math.random() * cellHeight,
+          size: Math.random() * 2.5 + 0.5,
+          speedX: (Math.random() - 0.5) * 0.2,
+          speedY: (Math.random() - 0.5) * 0.2,
+          opacity: Math.random() * 0.5 + 0.2,
+          twinkleSpeed: Math.random() * 0.03 + 0.01,
+          twinklePhase: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    function drawStars() {
+      // Get current theme background color
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+        (!document.documentElement.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      const bgColor = isDark ? '#1a1f26' : '#f5f7fa';
+
+      // Draw background
+      ctx.fillStyle = bgColor;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      stars.forEach(star => {
+        // Twinkle effect
+        star.twinklePhase += star.twinkleSpeed;
+        const twinkle = (Math.sin(star.twinklePhase) + 1) / 2;
+        const currentOpacity = star.opacity * (0.5 + twinkle * 0.5);
+
+        // Draw star with glow
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(118, 185, 0, ${currentOpacity})`;
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = `rgba(118, 185, 0, ${currentOpacity * 1.5})`;
+        ctx.fill();
+
+        // Extra glow layer
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size * 2, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(118, 185, 0, ${currentOpacity * 0.2})`;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        // Move star
+        star.x += star.speedX;
+        star.y += star.speedY;
+
+        // Wrap around edges
+        if (star.x < 0) star.x = canvas.width;
+        if (star.x > canvas.width) star.x = 0;
+        if (star.y < 0) star.y = canvas.height;
+        if (star.y > canvas.height) star.y = 0;
+      });
+
+      requestAnimationFrame(drawStars);
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createStars();
+    });
+
+    resizeCanvas();
+    createStars();
+    drawStars();
+
+    // Active section detection for navigation using Intersection Observer
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.header-nav a');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + sectionId) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Handle bottom of page for last sections
+    window.addEventListener('scroll', () => {
+      if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 50) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const lastLink = document.querySelector('.header-nav a[href="#gallery"]');
+        if (lastLink) lastLink.classList.add('active');
+      }
+    });
+  </script>
+
 </body>
 
 </html>
