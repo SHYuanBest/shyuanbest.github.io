@@ -597,6 +597,9 @@ p {
     padding-bottom: 0;
 }
 
+.star-badge {
+  vertical-align: middle;
+}
 
 .publication-list .project-entry {
     padding: 12px 15px;
