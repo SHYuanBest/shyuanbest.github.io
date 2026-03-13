@@ -418,6 +418,10 @@ p {
   vertical-align: middle;
 }
 
+.star-badge {
+  vertical-align: middle;
+}
+
 /* --- Profile Section (Header & Photo Styling) --- */
 .profile-section {
   text-align: left;
@@ -595,10 +599,6 @@ p {
     gap: 0; 
     padding-top: 0;
     padding-bottom: 0;
-}
-
-.star-badge {
-  vertical-align: middle;
 }
 
 .publication-list .project-entry {
